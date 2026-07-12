@@ -1,3 +1,7 @@
+output "oracle_autonomous_database_backups_id" {
+  description = "Map of id values across all oracle_autonomous_database_backups, keyed the same as var.oracle_autonomous_database_backups"
+  value       = { for k, v in azurerm_oracle_autonomous_database_backup.oracle_autonomous_database_backups : k => v.id }
+}
 output "oracle_autonomous_database_backups_autonomous_database_id" {
   description = "Map of autonomous_database_id values across all oracle_autonomous_database_backups, keyed the same as var.oracle_autonomous_database_backups"
   value       = { for k, v in azurerm_oracle_autonomous_database_backup.oracle_autonomous_database_backups : k => v.autonomous_database_id }
