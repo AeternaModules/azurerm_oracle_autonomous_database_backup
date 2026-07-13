@@ -13,7 +13,7 @@ EOT
     autonomous_database_id   = string
     name                     = string
     retention_period_in_days = number
-    type                     = optional(string) # Default: "LongTerm"
+    type                     = optional(string)
   }))
 }
 
